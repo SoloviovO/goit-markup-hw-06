@@ -141,6 +141,8 @@ ul {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.site-nav-link:hover::after,
+.site-nav-link:focus::after,
 .site-nav-link.current::after {
   position: absolute;
   bottom: -1px;
@@ -150,6 +152,19 @@ ul {
   height: 4px;
   background: var(--accent-color);
   border-radius: 2px;
+}
+
+.site-nav-link::after {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  content: '';
+  min-width: 100%;
+  height: 4px;
+  background: transparent;
+  border-radius: 2px;
+
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav-link:hover,
@@ -489,7 +504,7 @@ ul {
   margin-bottom: 9px;
 }
 
-.call-subtitle {
+.subtitle {
   margin-bottom: 20px;
 
   color: var(--main-light-color);
@@ -503,16 +518,7 @@ ul {
 .footer-box {
   display: flex;
   align-items: baseline;
-}
-
-.main-info-box {
-  display: inline-block;
-}
-
-.call {
-  display: inline-block;
-  margin-left: 93px;
-  width: 206px;
+  gap: 93px;
 }
 
 .call-list {
@@ -532,6 +538,17 @@ ul {
 }
 
 .social-icon {
+  fill: currentColor;
+}
+
+.signup-button {
+  padding: 10px 28px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.signup-icon {
   fill: currentColor;
 }
 
@@ -705,6 +722,14 @@ ul {
   background: var(--main-light-color);
   border: 1px solid var(--btn-close-border-color);
   border-radius: 50%;
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
 }
 
 /* ==================== Бекддроп і модалки ============*/
