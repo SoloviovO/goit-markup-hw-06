@@ -817,6 +817,8 @@ ul {
 .icon-person {
   fill: currentColor;
   position: absolute;
+  pointer-events: none;
+
   bottom: 11px;
   left: 12px;
   border: none;
@@ -862,6 +864,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  user-select: none;
 
   margin-bottom: 30px;
 
@@ -875,18 +878,20 @@ ul {
   appearance: none;
 }
 
-.checkbox-icon {
+.checkbox-icon-box {
   display: flex;
-  border-radius: 2px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
   width: 16px;
   height: 15px;
   margin-right: 7px;
   border: 2px solid var(--primary-text-color);
 }
 
-.form-input-check:checked + .checkbox-icon {
+.form-input-check:checked + .checkbox-icon-box {
   background-color: var(--accent-color);
-  border: transparent;
+  border: none;
 }
 
 .form-link {
